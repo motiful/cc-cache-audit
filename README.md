@@ -33,9 +33,11 @@ chmod +x run-test.sh
 ./run-test.sh
 ```
 
-Runs 4 sessions with the header ON, then 4 with it OFF. Extracts `cache_read_input_tokens` from session JSONL files and generates a comparison report in `results/report.md`.
+Runs 4 sessions with the header ON, then 4 with it OFF. Extracts `cache_read_input_tokens` from session JSONL files and generates a raw comparison in `results/`.
 
-Requires `claude` CLI installed and authenticated.
+The curated report with full analysis is [`report.md`](report.md) in the repo root (written separately from the script output).
+
+Requires `claude` CLI installed and authenticated. Note: the script outputs local JSONL paths in metrics files — scrub them before publishing.
 
 ## Related Issues
 

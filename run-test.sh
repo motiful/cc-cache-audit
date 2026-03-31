@@ -76,7 +76,6 @@ extract_metrics() {
   "round": "$round_label",
   "session": $session_idx,
   "prompt": "$prompt_text",
-  "jsonl": "$jsonl_file",
   "first_request": {
     "input_tokens": ${input_tokens:-0},
     "cache_read_input_tokens": ${cache_read:-0},
@@ -162,7 +161,7 @@ generate_report() {
 - Sessions run sequentially with 8s gap (within 5-min cache TTL)
 - Metric: `cache_read_input_tokens` on the FIRST API request of each session
 
-**Key expectation**: In Round B, sessions 2-4 should show high `cache_read_input_tokens` (system prompt cached from session 1). In Round A, all sessions should show low/zero cache_read (each has a unique system prompt prefix).
+**Key expectation**: In Round A, each session should show partial cache_read (tools block cached, system prompt rebuilt due to header hash change). In Round B, sessions 2+ should show full cache_read (both tools and system prompt served from cache).
 
 ## Results
 
