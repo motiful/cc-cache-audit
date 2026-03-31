@@ -2,7 +2,6 @@
   "round": "b",
   "session": 1,
   "prompt": "What is the capital of France? Answer in one word.",
-  "jsonl": "/Users/<user>/.claude/projects/-Users-<user>-motifpool-booth-booth--claude-worktrees-cache-audit/f0e7b8bd-3b08-4958-b6d5-601e78469741.jsonl",
   "first_request": {
     "input_tokens": 3,
     "cache_read_input_tokens": 23478,
