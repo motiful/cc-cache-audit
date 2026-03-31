@@ -1,0 +1,13 @@
+{
+  "round": "b",
+  "session": 2,
+  "prompt": "List three prime numbers under 20.",
+  "jsonl": "/Users/<user>/.claude/projects/-Users-<user>-motifpool-booth-booth--claude-worktrees-cache-audit/aaea4237-5bc7-49fe-9d73-dc1e568b671e.jsonl",
+  "first_request": {
+    "input_tokens": 3,
+    "cache_read_input_tokens": 23474,
+    "cache_creation_input_tokens": 0,
+    "output_tokens": 11
+  },
+  "cache_hit_ratio": ".9998"
+}

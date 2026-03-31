@@ -1,0 +1,3 @@
+
+
+A goroutine is a lightweight, user-space thread managed by the Go runtime that enables concurrent execution of functions with minimal memory overhead (~2KB initial stack) and is multiplexed onto OS threads via Go's M:N scheduler.

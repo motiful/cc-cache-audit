@@ -1,0 +1,13 @@
+{
+  "round": "a",
+  "session": 4,
+  "prompt": "Name one benefit of TypeScript over JavaScript.",
+  "jsonl": "/Users/<user>/.claude/projects/-Users-<user>-motifpool-booth-booth--claude-worktrees-cache-audit/1e11dea3-416e-442d-a9c4-61fec84afcbf.jsonl",
+  "first_request": {
+    "input_tokens": 3,
+    "cache_read_input_tokens": 11272,
+    "cache_creation_input_tokens": 12203,
+    "output_tokens": 28
+  },
+  "cache_hit_ratio": ".4801"
+}

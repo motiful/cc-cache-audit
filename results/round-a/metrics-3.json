@@ -1,0 +1,13 @@
+{
+  "round": "a",
+  "session": 3,
+  "prompt": "Explain what a goroutine is in one sentence.",
+  "jsonl": "/Users/<user>/.claude/projects/-Users-<user>-motifpool/04b252a6-3b7d-41ef-81c4-7b3b5481270f.jsonl",
+  "first_request": {
+    "input_tokens": 3,
+    "cache_read_input_tokens": 11374,
+    "cache_creation_input_tokens": 12753,
+    "output_tokens": 29
+  },
+  "cache_hit_ratio": ".4713"
+}
