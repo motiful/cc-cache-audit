@@ -31,7 +31,15 @@ function computeHash(firstUserMessage, version) {
 
 Different conversation → different first message → different hash → different system prompt prefix.
 
-Anthropic's prompt cache uses [prefix matching](https://platform.claude.com/docs/en/build-with-claude/prompt-caching) with no per-session isolation — cache is shared at the Organization/Workspace level. So all Claude Code sessions *should* share the same cached system prompt. But the billing header makes each session's prefix unique, causing the system prompt (~12K tokens) to get rebuilt from scratch every time.
+This also affects **subagents within the same conversation**. Each Agent tool call has its own message context, so its first "user message" (the agent prompt) produces a different hash. Verified in a real session — 3 distinct hashes in one conversation:
+
+```
+Main conversation:  cc_version=2.1.88.a3f  (34 API calls)
+Subagent 1:         cc_version=2.1.88.e91  (3 API calls)
+Subagent 2:         cc_version=2.1.88.7c2  (3 API calls)
+```
+
+Anthropic's prompt cache uses [prefix matching](https://platform.claude.com/docs/en/build-with-claude/prompt-caching) with no per-session isolation — cache is shared at the Organization/Workspace level. So all Claude Code sessions and subagents *should* share the same cached system prompt. But the billing header makes each one's prefix unique, causing the system prompt (~12K tokens) to get rebuilt from scratch every time.
 
 ## A/B Test
 
