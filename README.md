@@ -122,6 +122,11 @@ Requires `claude` CLI installed and authenticated. Note: the script outputs loca
 
 Claude Code 2.1.88 / macOS arm64 / `claude --print` mode / 2026-03-31.
 
+## Author
+
+- GitHub: [@motiful](https://github.com/motiful)
+- X: [@whiletrue0x](https://x.com/whiletrue0x)
+
 ## License
 
 MIT
